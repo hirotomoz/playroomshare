@@ -1,0 +1,7 @@
+ * Monacaメモ [#m70bd8f6]
+ 
+ #contents
+ 
+ ** インストール [#yf60994e]
++・アカウントの作成~
++http://monaca.mobi/?lang=ja~

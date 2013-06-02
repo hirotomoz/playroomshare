@@ -1,0 +1,18 @@
+/*
+ * フリーページCSS 
+ */
+#login { 
+    width: 200px;
+    margin : 0 auto;
+}
+#login h3{ 
+    text-align: center;
+}
+#login li {
+    list-style-type: none;
+    margin-left: 0;
+}
+/* 顧客ページ */
+#myreserve {
+    margin: 5px;
+}

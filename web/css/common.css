@@ -1,0 +1,47 @@
+/*
+ * 共通レイアウトCSS 
+ */
+/* hedder */
+#headmenu {
+    margin-top: 15px;
+}
+/* sidemenu */
+#sidemenu {
+    width: 220px;
+    float: left;
+    border: 10px solid #c4e3f3;
+    margin: 0 10px 0 0;
+}
+#sidemenu li {
+    text-align: center;
+    margin: 10px;
+    border: 2px solid #006dcc;
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+}
+/* main */
+#main {
+    float: left;
+    width: 670px;
+    border: 10px solid #C4E3F3;
+}
+/* footer */
+#footmenu {
+    text-align: center;
+    margin-top: 15px;
+    border: 10px solid #C4E3F3;
+}
+/* common */
+.txt_center {
+    text-align: center;
+}
+.contentsblock {
+    border: 5px solid #c4e3f3;
+    width: 95%;
+    margin: 5px;
+}
+.contentsblock li {
+    margin-left:0px;
+    list-style-type: none;
+}

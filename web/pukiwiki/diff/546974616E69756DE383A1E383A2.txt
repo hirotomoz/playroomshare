@@ -1,0 +1,36 @@
+ * Titaniumメモ [#u27f3d51]
+ Android と iOS のデバッグ，モバイルアプリとデスクトップアプリの実行-デプロイ-~
+ パッケージ処理，Git サポート，統合ターミナルその他の新機能を実装したモバイル，~
+ デスクトップ，Web 開発用 IDE 。~
+ 
+ #contents
+ 
+ ** Titanium Studioの導入 [#r77786b5]
+ ・アカウントの作成~
+ http://www.appcelerator.com/platform/titanium-studio~
+ こちらのページからダウンロードしようとするとサインインを求められるので~
+ アカウントを登録。~
+ ~
+ ・ダウンロード~
+ アカウントを作成し、サインインを行うとマイページトップに移るので、Titanium Studio~
+ の環境に合ったものをダウンロードする。~
+ ~
+ ・初期設定~
+ ダウンロードしたTitanium Studioを起動するとワークスペースの設定を行い、ログイン~
+ を求められるのでアカウントでログイン。初回はソフトの自動更新などがかかる。~
+ 
+ ** プロジェクトの作成 [#e7d0ea51]
+ ・プロジェクト作成~
+-左のメニューから、Create Projectを選択し、Titanium Mobile(Module) Projectを~
+-選択する。~
++左のメニューから、Create Projectを選択し、Titanium Projectを選択する。~
+ ~
+ プロジェクト名を入力（例：FirstProj）~
+ App Idを入力（例:jp.co.nikkeibp.FirstProj）~
+ URLを入力（例:http://localhost）~
+ ~
+ Set-up/Configure SDKsをクリックしてAndroidSDKのパス設定（設定すると自動で~
+ ファイル群を読み込んでくれる）と、デフォルトのAndroidのバージョンを設定する。~
+ (例:2.3.3)~
+ ~
+ Finish~

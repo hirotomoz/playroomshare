@@ -1,0 +1,10 @@
+ * HTMLメモ [#uabd393c]
+ 
+ #contents
+ 
+ ** HTMLに動画の埋め込み [#t472db90]
+ -「ふらだんす」http://www.streaming.jp/fladance/
++-- 「ふらだんす」をダウンロードする。
+ -- 「fladance.swf」をサーバにアップする。
+ -- 動画ファイル(swf、mp4など)をサーバにアップする。
+ -- 「generator.html」を開いて上記2つのパスと、埋め込み動画サイズを入力しコード生成すると埋め込み用のHTMLが生成されるので、後は埋め込むだけ。

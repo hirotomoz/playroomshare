@@ -1,0 +1,51 @@
+&edit(MenuBar,noicon){edit};
+** MENU [#if72ced0]
+- [[Androidメモ]]
+-- [[jQueryMobileメモ]]
+-- [[Monacaメモ]]
+-- [[Titaniumメモ]]
+~
+~
+- [[Eclipseメモ]]
+~
+~
+- [[Gitメモ]]
+~
+~
+- [[HTMLメモ]]
+~
+~
+- [[Linuxメモ]]
+-- [[CentOSメモ]]
+~
+~
+- [[NODE.jsメモ]]
+~
+~
+- [[PHPメモ]]
+-- [[FuelPHPメモ]]
+~
+~
+- [[pukiwikiメモ]]
+~
+~
+- [[VMwareメモ]]
+~
+~
+- [[サーバ公開メモ]]
+-- [[さくらレンタルサーバメモ]]
+~
+~
+- [[セキュリティメモ]]
+--[[WEBアプリケーションセキュリティメモ]]
+~
+~
+- [[フレームワークメモ]]
+~
+~
+
+#recent(20)
+
+//常に表示されるメニューバーです。
+&edit(MenuBar,noicon){edit};
+//を記述しておくとMenuBarを気軽に修正できるようになって便利かも。

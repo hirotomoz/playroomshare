@@ -1,0 +1,18 @@
+/*
+ * トップページCSS 
+ */
+/* フリーコンテンツ */
+#free .contentsblock {
+    border: 5px solid #c4e3f3;
+    float: left;
+    width: 315px;
+    margin: 5px;
+}
+#free .contentsblock h3 {
+    text-align: center;
+}
+#free .contentsblock li {
+    margin-left:0px;
+    list-style-type: none;
+}
+

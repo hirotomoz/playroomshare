@@ -1,0 +1,59 @@
+ * NODE.jsメモ [#x82bb7c4]
+ 
+ #contents
+ 
+ ** インストールと設定 [#g9f5ec80]
+ titanium studioをインストールした時に同時にNODE.jsも一緒にインストールしたので~
+ 詳しいインストール方法は記述しない。~
+ コマンドプロンプトで以下のコマンドを実行し、バージョンが表示されればOK。~
+  $ node -v
+  v0.8.7
+ 
+ *** Hello World [#hf02ff32]
+ 以下のソースを「app.js」として保存
+  var http = require('http');
+  http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World\n');
+  }).listen(1337, "127.0.0.1");
+  console.log('Server running at http://127.0.0.1:1337/');
+ 
+ 保存したら、NODE.jsをコマンド実行
+  $ node app.js
+ 
+ ブラウザでhttp://127.0.0.1:1337/にアクセスしてHello Worldと表示されていれば成功。
+ 
+ ** モジュールのインストール [#ied9385e]
+ *** Express [#c3234306]
+ ・expressのグローバルインストール~
+ 　expressコマンドを使うには、Expressパッケージをグローバルインストールする。~
+  $ npm install -g express
+ 　バージョンの確認~
+  $ express -v
+  2.3.11
+ 
+ 「express (フォルダ名)」でフォルダの下にexpressの雛型がインストールされる。~
+ 
+  $ express -e sample // sampleにインストール
+  $ cd sample // sampleに移動
+  $ npm install //npmインストール
+ 
+ *** Socket.IO [#e2a635ff]
+  $ npm install socket.io
+ *** Mongoose [#yaa8341f]
+  $ npm install mongoose
+ 
+ ** サンプルコード [#s5804166]
+ *** チャットサンプル [#s3b7a391]
+  $git clone git://github.com/coppieee/node-chat-demo.git
+  $cd node-chat-demo
+  $npm install
+  $node app
++http://localhost:3000/にアクセス
+ 
+ *** 通信対戦シューティングゲーム [#pec3717b]
+  $ git clone git://github.com/coppieee/node-shooting-demo.git
+  $ cd node-shooting-demo
+  $ npm install
+  $ node app
++http://localhost:3000/にアクセス

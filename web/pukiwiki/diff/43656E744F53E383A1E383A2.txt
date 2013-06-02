@@ -1,0 +1,63 @@
++* CentOSメモ [#d6e42254]
+ 
++#contents
++
++** セキュリティ設定 [#k5358074]
++１．まず最初にsshのポート番号を変更します。~
++ポート番号の変更は必ずしないといけない訳ではないですが、簡単にできる攻撃対策です。
++インターネットでは、全世界の22番ポートをくまなく調べ、セキュリティホールのあるサーバが無いかチェックしているロボットがいます。
++もちろん、どうしてもあなたのサーバを落としたい！というロボットがいたら別ですが、普通のロボットは無差別なIPアドレスへポート22固定で攻撃をしてきますから、22番ポート以外に変更することは非常に効果があります。
++
++/etc/ssh/sshd_config
++
++ #Port 22
++ Port 10022
++
++今回は10022番ポートに変更しました。
++再起動されれば変更が反映されます。
++
++２．次に公開鍵認証でssh接続するように変更します
++sshでは公開鍵を利用してパスワードを使わずに接続することが可能です。
++具体的にはクライアントでキーペア（秘密鍵と公開鍵）を生成し、サーバには公開鍵だけを登録することで達成できます。
++キーペアの生成方法はクライアントによって異なりますが、teratermの場合でしたら「設定」→「SSH鍵生成」で生成できます。
++もしクライアントがLinuxやFreeBSDなどでOpenSSHを利用しているのであれば、以下のようにして生成を行います。
++
++ # ssh-keygen
++ Generating public/private rsa key pair.
++ Enter file in which to save the key (/root/.ssh/id_rsa):
++ Enter passphrase (empty for no passphrase):
++ Enter same passphrase again:
++ Your identification has been saved in /root/.ssh/id_rsa.
++ Your public key has been saved in /root/.ssh/id_rsa.pub.
++ The key fingerprint is:
++ ・・・・
++
++次に生成された公開鍵をサーバにセットします。
++
++ # cat >> ~/.ssh/authorized_keys
++ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEArg5hePwQQPJKWvlNFGi4TArKI2kB
++ e4pZNGY/KeEYp3JkmRbcFgThliRmaCVUauCYvSddenbuwF5jytP8py5JtYNaUOnEO
++ J4JU5298dA1Ul2rrft9B+GcEN1tYL4iJStMi4gkK1234567890/3rD+0bfEv5M6PwgRhy6
++ gE3LrYw+hpigyi7EChcgtv0e205fDUFcenArrjgGxz9Vw5edz7pHA9dSHLveLanrxNu0p
++ Ry5KYH49IdSp141TcQXm1xL/l/3erH+pnoG4taDjH3LIdC8BglZzVPbuO5jySW62ciRw
++ QFguH7hzp/Uily3pbsmy0EtAjIcrZ5SCUe7rXLHlfQ== tanaka@tanaka-PC
++ ^D
++ #
++
++これで公開鍵を利用したログインが可能になります。
++
++ただ、ここで安心してはいけません。
++今の状態は、公開鍵"でも"ログインできる状態なだけで、公開鍵"でしか"ログインできないわけではありません。
++これを変更するには、再度sshの設定を変更します。
++
++/etc/ssh/sshd_config
++
++ PermitRootLogin without-password
++
++このあとでsshdを再起動すれば、rootログインは公開鍵認証でのみ行えるようになります。
++
++なお、root以外のユーザにおいても公開鍵のみのログインにしたい場合には、以下のような設定を行います。
++
++ PasswordAuthentication no
++
++これで、SSHログインは全てのユーザにおいてパスワード認証が無効化されました。

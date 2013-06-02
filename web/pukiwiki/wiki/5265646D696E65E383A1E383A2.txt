@@ -1,0 +1,34 @@
+* Redmineメモ [#efdea474]
+
+#contents
+
+** 概要 [#k6448c4a]
+Redmineはオープンソースのプロジェクト管理ソフトウェアです。~
+~
+プロジェクトのタスク管理、進捗管理、情報共有が行えます。SubversionやGitなどのバージョン管理システムとの連携機能も備えており、ソフトウェア開発やwebサイト制作などのITプロジェクトで特に威力を発揮します。~
+~
+【説明用スライド】~
+http://www.slideshare.net/g_maeda/redmine-13090673~
+~
+** 事前準備 [#jf254317]
+・rubyのインストール~
+　インストーラのダウンロード~
+　　1.9.3系の最新：Ruby 1.9.3-p362~
+　　http://rubyinstaller.org/downloads/~
+~
+　同時にDevelopment Kitもダウンロードする~
+　　DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe~
+~
+　rubyのインストール~
+　　インストール時に「Tcl/Tk」もインストールしておくとGUIでrubyが使えるので入れておく。~
+~
+　Development Kitのインストール~
+　　とりあえず、展開だけ完了~
+
+~
+** ダウンロードとインストール [#k41118af]
+・ダウンロード（最新：2.2.1）~
+http://rubyforge.org/frs/?group_id=1850~
+~
+・インストール~
+~

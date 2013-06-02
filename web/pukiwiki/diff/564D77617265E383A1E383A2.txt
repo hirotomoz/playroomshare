@@ -1,0 +1,35 @@
+ * VMwareメモ [#v2fc1077]
+ 
+ #contents
+ 
+ ** VMware Playerインストール [#pf1fb7cd]
+ http://www.e-agency.co.jp/column/20121004.html~
+ 
+ ・VMware Playerをこちらからダウンロード~
+ http://www.vmware.com/~
+ ※Windows/Linux、32/64bitの製品の違いだけ注意~
+ ~
+ ・特に気にする事は無くインストール完了までする。~
+ ~
+-** CentOSのインストールと実装 [#n5d3b837]
++** CentOSのインストールと設定 [#n5d3b837]
+ ・CentOSのDVDイメージをダウンロード~
+ ※4Gくらいあるのでダウンロードに時間がかかる~
+ ~
+ 64bit版DVDイメージ~
+ ftp://ftp.kddilabs.jp/Linux/packages/CentOS/6.3/isos/x86_64/CentOS-6.3-x86_64-bin-DVD1.iso~
+ 32bit版DVDイメージ~
+ ftp://ftp.kddilabs.jp/Linux/packages/CentOS/6.3/isos/i386/CentOS-6.3-i386-bin-DVD1.iso~
+ ~
+-
++・セットアップ
++　VMware Playerを起動~
++　VMware Playerで新規仮想マシンの作成~
++　インストーラディスクイメージファイルでダウンロードしたisoファイルを指定~
++　アカウントを設定（パスワードはrootと共通になる）~
++　ディスク最大サイズは20.0G、仮想ディスクを複数のファイルに分割を選択~
++　完了~
++　設定したアカウントでCentOSにログイン~
++　ifconfigでIP確認、ホストのputtyで接続確認
++　（必要があればプロキシ設定もしないとインターネットできない）~
++　

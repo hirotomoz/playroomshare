@@ -1,0 +1,58 @@
+ * pukiwikiメモ [#a2d1e100]
+ 
+ #contents
+ 
+ ** インストール(Windows7　localhostにpukiwiki作成) [#d54c728c]
+ --http://pukiwiki.sourceforge.jp/?PukiWiki%2FDownloadから最新版をダウンロード。（2012/10/30現在は「PukiWiki/Download/1.4.7」）
+ --ダウンロードしたzipファイルを解凍し、解凍したフォルダ（「pukiwiki-1.4.7_notb_utf8」）ごとWEBサーバへアップロード。アップロード後、フォルダ名を「pukiwiki」などに変更する。
+ --http://www.ドメイン名/pukiwikiでアクセスしても真っ白なページになるので、pukiwiki/index.phpを開いて、error_reporting(E_ALL)　に設定する。
+  // Error reporting
+  // error_reporting(0); // Nothing
+  // error_reporting(E_ERROR | E_PARSE); // Avoid E_WARNING, E_NOTICE, etc
+  error_reporting(E_ALL); // Debug purpose
+ --pukiwiki/lib/func.phpのhex2binが重複宣言でFatal errorになっているので、そこを回避する。
+  if (! function_exists('hex2bin')) {
+  	function hex2bin($hex_string)
+  	{
+  		// preg_match : Avoid warning : pack(): Type H: illegal hex digit ...
+  		// (string)   : Always treat as string (not int etc). See BugTrack2/31
+  		return preg_match('/^[0-9a-f]+$/i', $hex_string) ?
+  			pack('H*', (string)$hex_string) : $hex_string;
+  	}
+  }
+ 
+ --error_reportingを戻す
+  // Error reporting
+  // error_reporting(0); // Nothing
+   error_reporting(E_ERROR | E_PARSE); // Avoid E_WARNING, E_NOTICE, etc
+  // error_reporting(E_ALL); // Debug purpose
+ 
++--↑Wiki設定時のメモ。まだエラー全部出すと大量に出てくるからこのあたりもしっかり整理して、エラーオールで運用したい。
+ ** 初期設定 [#c1e2067d]
+ --pukiwiki/plugin/dump.inc.phpを修正してリストア出来るようにする。
+  define('PLUGIN_DUMP_ALLOW_RESTORE', TRUE);
+ --wikiパスワードを設定~
+ http://www.ドメイン名/pukiwikiへアクセスしてwikiの表示確認。~
+ wikiのパスワード設定。http://www.ドメイン名/pukiwiki/?cmd=md5へアクセス。~
+ 「Phrase」へPukiwikiへ設定するパスワードを入力し、「PHP md5()」のラジオボタンをチェック後「Compute」をクリックする。~
+ 「Result」以下に暗号化されたパスワードが表示されたものを、pukiwiki.ini.phpの$adminpassに記述する。~
+  /////////////////////////////////////////////////
+  // Admin password for this Wikisite
+  
+  // Default: always fail
+  //$adminpass = '{x-php-md5}!';
+  
+  // Sample:
+  //$adminpass = 'pass'; // Cleartext
+  //$adminpass = '{x-php-md5}1a1dc91c907325c69271ddf0c944bc72'; // PHP md5()  'pass'
+  //$adminpass = '{CRYPT}$1$AR.Gk94x$uCe8fUUGMfxAPH83psCZG/';   // LDAP CRYPT 'pass'
+  //$adminpass = '{MD5}Gh3JHJBzJcaScd3wyUS8cg==';               // LDAP MD5   'pass'
+  //$adminpass = '{SMD5}o7lTdtHFJDqxFOVX09C8QnlmYmZnd2Qx';      // LDAP SMD5  'pass'
+  
+  //Change 2012/10/30 (abcdefg)
+  $adminpass = '{x-php-md5}826d2eab4fe9be448966f0bc4dff32fe';
+ 
+ ** メニューバーの幅調整 [#m5f5bae2]
+ skin/pukiwiki.css.phpの360行あたり。
+  div#menubar
+         width:14em;

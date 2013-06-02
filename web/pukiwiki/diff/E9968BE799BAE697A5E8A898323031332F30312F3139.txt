@@ -1,0 +1,6 @@
++* VMにUbuntuでTitanium [#r3a0c6b9]
++さて、今日はVMにubuntu入れて、titanium動かす所までかな？
+ 
++** 今日やった所 [#z7948cfe]
++--
++--
