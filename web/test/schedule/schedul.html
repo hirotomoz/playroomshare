@@ -1,0 +1,60 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>スケジュール管理用カレンダー</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link href="css/theme.css" rel="stylesheet">
+        <link href='css/fullcalendar.css' rel='stylesheet' />
+        <link href="css/fullcalendar.print.css" rel='stylesheet' media='print' />
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+        <script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js" ></script>
+        <script type="text/javascript" src="js/fullcalendar.js" ></script>
+        <script type="text/javascript" src="js/common.js" ></script>
+        <style>
+            body {
+                    margin-top: 40px;
+                    text-align: center;
+                    font-size: 13px;
+                    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+                    }
+
+            #calendar {
+                    width: 900px;
+                    margin: 0 auto;
+                    }
+        </style>
+    </head>
+    <body>
+        <div>スケジュール管理用カレンダー</div>
+        <!-- スケジュール管理用カレンダーI/F -->
+        <div id='calendar' style="width:70%; height: 1000px; float: left;"></div>
+        <!-- 右側 -->
+        <div id="right_side" style=" width:25%; height: 1000px; float: left; border-color:red; text-align: left; padding: 10px;">
+            <!-- イベント登録エリア -->
+            <div id='input_area' style="height: 400px; border-color:red;">
+                <ul class="input_e_list" style="list-style:none;">
+                    <li class="type-text" style="margin: 5px 0 !important; padding: 0 !important; float:left; width: 100%;">
+                        <div class="label" style="float:left; padding-right: 5px; text-align: right; font-family: Arial,Helvetica,Verdana,sans-serif; margin: 0; font-size: 19px; width: 105px;">タイトル</div>
+                        <div class="field" style="float:left;"><input type="text" name="e_title" size="20" maxlength="20" value=""></div>
+                    </li>
+                    <li class="type-text" style="margin: 5px 0 !important; padding: 0 !important; float:left; width: 100%;">
+                        <div class="label" style="float:left; padding-right: 5px; text-align: right; font-family: Arial,Helvetica,Verdana,sans-serif; margin: 0; font-size: 19px; width: 105px;">開始時間</div>
+                        <div class="field" style="float:left;"><input type="text" name="e_title" size="10" maxlength="10" value=""></div>
+                    </li>
+                    <li class="type-text" style="margin: 5px 0 !important; padding: 0 !important; float:left; width: 100%;">
+                        <div class="label" style="float:left; padding-right: 5px; text-align: right; font-family: Arial,Helvetica,Verdana,sans-serif; margin: 0; font-size: 19px; width: 105px;">終了時間</div>
+                        <div class="field" style="float:left;"><input type="text" name="e_title" size="10" maxlength="10" value=""></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- イベント確認エリア -->
+            <div id='detail_area' style="height: 400px; border-color:red; "></div>
+        </div>
+    </body>
+</html>
