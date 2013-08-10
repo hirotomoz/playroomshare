@@ -46,3 +46,7 @@ WebActivityAnalyze.prototype = {
 // 解析開始
 var WAA = new WebActivityAnalyze;
 WAA.onload();
+
+// jQuery
+$(function(){
+});

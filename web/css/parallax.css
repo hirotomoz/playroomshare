@@ -1,0 +1,8 @@
+#bg {
+  margin: 0;
+  padding: 0;
+  height: 3000px;
+  background: url('/img/kuma.jpg') no-repeat;
+  background-position: center top;
+}
+ 

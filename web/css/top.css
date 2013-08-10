@@ -5,7 +5,7 @@
 #free .contentsblock {
     border: 5px solid #c4e3f3;
     float: left;
-    width: 315px;
+    width: 285px;
     margin: 5px;
 }
 #free .contentsblock h3 {
@@ -15,4 +15,18 @@
     margin-left:0px;
     list-style-type: none;
 }
-
+/* ニュースフィード */
+#feed .contentsblock {
+    border: 5px solid #c4e3f3;
+    float: left;
+    width: 285px;
+    height: 200px;
+    margin: 5px;
+}
+#feed .contentsblock h3 {
+    text-align: center;
+}
+#feed .contentsblock li {
+    margin-left:0px;
+    list-style-type: none;
+}

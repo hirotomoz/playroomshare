@@ -6,6 +6,8 @@
 	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link href="/css/import.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/jquery-1.10.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/js/common.js" charset="utf-8"></script>
         <?php if(isset($head) && count($head) > 0): ?>
             <?php foreach ($head as $key => $val): ?>
                 <?php echo $val; ?>
@@ -14,8 +16,7 @@
 	<title><?php if (isset($title)): echo $this->escape($title) . ' - ';
 		endif; ?>PlayRoomShare</title>
 </head>
-<body>
-
+<body id="body">
 	<div class="container">
             <div class="row">
                 <div id="header">
@@ -84,7 +85,8 @@
                     </div>
                 </div>
             </div>
-	
+
+            <span id="sidemenu_ctr">隠す＜＜</span><br>
             <div id="sidemenu">
                 <ul class="unstyled">
                     <?php echo $this->render('topmenu', array('sidemenu' => TRUE)); ?>

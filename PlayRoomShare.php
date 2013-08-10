@@ -42,6 +42,9 @@ class PlayRoomShare extends Application
 				=> array('controller' => 'webactivityanalyze', 'action' => 'index'),
 			'/free/webactivityanalyze/:action'
 				=> array('controller' => 'webactivityanalyze'),
+                        /* jQuery */
+			'/free/jquery/:action'
+				=> array('controller' => 'jquery'),
                         /* メンテナンス画面 */
 			'/maintenance'
 				=> array('controller' => 'maintenance', 'action' => 'index'),

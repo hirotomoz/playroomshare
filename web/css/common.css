@@ -6,6 +6,9 @@
     margin-top: 15px;
 }
 /* sidemenu */
+#sidemenu_ctr {
+    float: left;
+}
 #sidemenu {
     width: 220px;
     float: left;

@@ -1,0 +1,14 @@
+/*
+ * レスポンシブWEB　メインCSS
+ */
+@charset "utf-8";
+/*************
+デフォルト設定
+*************/
+@import url(default.css);
+/* PC用CSS (769px以上) */
+@import url(pc.css) screen and (min-width: 769px);
+/* タブレット用CSS (641~768px) */
+@import url(tablet.css) screen and (max-width: 768px);
+/* スマホ用CSS (640px以下) */
+@import url(smart.css) screen and (max-width: 640px);

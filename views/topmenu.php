@@ -4,4 +4,5 @@
 <li><a href="/free">フリーコンテンツ</a><?php if (!isset($sidemenu)) { echo '<span class="divider">/</span>'; } ?></a></li>
 <li><a href="/maintenance">プロフィール</a><?php if (!isset($sidemenu)) { echo '<span class="divider">/</span>'; } ?></a></li>
 <li><a href="/maintenance">ルームイン</a><?php if (!isset($sidemenu)) { echo '<span class="divider">/</span>'; } ?></a></li>
+<li><a href="/pukiwiki/index.php">pukiwiki</a><?php if (!isset($sidemenu)) { echo '<span class="divider">/</span>'; } ?></a></li>
 <li><a href="/maintenance">サイトマップ</a></li>

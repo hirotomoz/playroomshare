@@ -18,15 +18,11 @@
         </ul>
     </div>
     <div class="contentsblock">
-        <h3>wiki</h3>
-        <ul>
-            <li><a href="/pukiwiki/index.php">pukiwiki</a></li>
-        </ul>
-    </div>
-    <div class="contentsblock">
         <h3>ネタ（スキル）</h3>
         <ul>
-            <li><a href="/free/reserve">美容室予約管理システム</a></li>
+            <li>美容室予約管理システム<a href="/free/reserve/staff">管理者</a>・<a href="/free/reserve/customer">ユーザ</a></li>
+            <li><a href="/free/jquery/parallax">jQuery パララックス</a></li>
+            <li><a href="/free/jquery/feed">jQuery ニュースフィード</a></li>
             <li>wordpress</li>
             <li>memcashed</li>
             <li>github</li>
